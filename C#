@@ -1,0 +1,81 @@
+using System;
+using System.Threading;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Remote;
+using OpenQA.Selenium.Support.UI;
+
+namespace se_builder {
+  public class  {
+    static void Main(string[] args) {
+      IWebDriver wd = new RemoteWebDriver(DesiredCapabilities.Firefox());
+      try {
+        var wait = new WebDriverWait(wd, TimeSpan.FromSeconds(60));
+        wd.Navigate().GoToUrl("https://www.amazon.com/");
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("nav-tools"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//a[@id='nav-link-accountList']//span[.='Hello. Sign in']"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//a[@id='nav-link-accountList']//span[.='Account & Lists']"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("nav-link-accountList"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//a[@id='nav-link-accountList']//span[.='Hello. Sign in']"))).Build().Perform();
+        wd.FindElement(By.XPath("//a[@id='nav-link-accountList']//span[.='Hello. Sign in']")).Click();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//div[@id='a-page']/div[1]"))).Build().Perform();
+        wd.FindElement(By.Id("ap_email")).Click();
+        wd.FindElement(By.Id("ap_email")).Clear();
+        wd.FindElement(By.Id("ap_email")).SendKeys("use");
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-box-inner.a-padding-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("auth-fpp-link-bottom"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-box-inner.a-padding-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//div[@id='a-page']/div[1]/div[3]/div/div/form/div/div/div/div[2]/div[1]/div[2]"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("auth-fpp-link-bottom"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("ap_password"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-box-inner.a-padding-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("ap_password"))).Build().Perform();
+        wd.FindElement(By.Id("ap_email")).Click();
+        wd.FindElement(By.Id("ap_email")).SendKeys("\\undefined");
+        wd.FindElement(By.Id("ap_password")).Click();
+        wd.FindElement(By.Id("ap_password")).Clear();
+        wd.FindElement(By.Id("ap_password")).SendKeys("pwd");
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-box-inner.a-padding-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("a-autoid-0"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("signInSubmit"))).Build().Perform();
+        wd.FindElement(By.Id("ap_password")).Click();
+        wd.FindElement(By.Id("ap_password")).SendKeys("\\undefined");
+        wd.FindElement(By.Id("signInSubmit")).Click();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-box-inner.a-padding-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("h1.a-spacing-small"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-box-inner.a-padding-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("label.a-form-label"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-box-inner.a-padding-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("label.a-form-label"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-box-inner.a-padding-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("label.a-form-label"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-box-inner.a-padding-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-section.a-spacing-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//div[@id='a-page']/div[1]/div[3]/div/div/form/div/div/div/div[3]/div[2]"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-section.a-spacing-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//div[@id='a-page']/div[1]/div[3]/div/div/form/div/div/div/div[3]/div[2]"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-section.a-spacing-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("h5"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("createAccountSubmit"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-box-inner.a-padding-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-divider-inner"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.LinkText("Privacy Notice"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//div[@id='a-page']/div[1]"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-box-inner.a-padding-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-divider.a-divider-break"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.a-box-inner.a-padding-extra-large"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//div[@id='a-page']/div[1]"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//div[@id='a-page']/div[1]"))).Build().Perform();
+      } finally { wd.Quit(); }
+    }
+    
+    public static bool isAlertPresent(IWebDriver wd) {
+        try {
+            wd.SwitchTo().Alert();
+            return true;
+        } catch (NoAlertPresentException e) {
+            return false;
+        }
+    }
+  }
+}
