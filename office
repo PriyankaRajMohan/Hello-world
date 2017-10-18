@@ -1,0 +1,85 @@
+using System;
+using System.Threading;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Remote;
+using OpenQA.Selenium.Support.UI;
+
+namespace se_builder {
+  public class  {
+    static void Main(string[] args) {
+      IWebDriver wd = new RemoteWebDriver(DesiredCapabilities.Firefox());
+      try {
+        var wait = new WebDriverWait(wd, TimeSpan.FromSeconds(60));
+        wd.Navigate().GoToUrl("https://www.bing.com/");
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("sb_form_q"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.b_searchboxForm"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("sb_form_q"))).Build().Perform();
+        wd.FindElement(By.Id("sb_form_q")).Click();
+        wd.FindElement(By.Id("sb_form_q")).Clear();
+        wd.FindElement(By.Id("sb_form_q")).SendKeys("microsoftoutlook");
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.b_searchboxForm"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.sa_as"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.sa_tm"))).Build().Perform();
+        wd.FindElement(By.Id("sb_form_q")).Click();
+        wd.FindElement(By.Id("sb_form_q")).SendKeys("\\undefined");
+        wd.FindElement(By.CssSelector("div.sa_tm")).Click();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("focus_ovr"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//table/tbody/tr/td/div/div[9]/div[1]"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("html"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.LinkText("Outlook.com - Microsoft free personal email"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//ol[@id='b_results']/li[2]/div[1]/div"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//ol[@id='b_results']/li[2]/div[1]/p"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//ol[@id='b_results']/li[4]/h2"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("b_content"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("b_content"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("ul.b_hList"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.b_vlist2col.b_deep"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//ol[@id='b_results']/li[2]/div[1]/p"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//ol[@id='b_results']/li[2]/div[1]/div"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.LinkText("Outlook.com - Microsoft free personal email"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("li.b_algo"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("p"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.b_attribution"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("p"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.b_caption"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("li.b_algo"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.LinkText("Outlook.com - Microsoft free personal email"))).Build().Perform();
+        wd.FindElement(By.LinkText("Outlook.com - Microsoft free personal email")).Click();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("html"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("h1"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.headerHero"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//div[@class='outlookMessage']//h1[.='Focus on what matters']"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.outlookMessage"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.headerHero"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.headerHero"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.LinkText("Get premium"))).Build().Perform();
+        wd.FindElement(By.LinkText("Get premium")).Click();
+        new Actions(wd).MoveToElement(wd.FindElement(By.CssSelector("div.pmg-page-wrapper.CSPvNext"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("chatwrapper-transport-mobile"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//div[@id='pmg-au-content-1']/section/div/div/div[2]"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//div[@id='pmg-au-content-1']/section/div/div/div[2]/div"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//a[@id='HomeM2M_26']//span[normalize-space(.)='month']"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("pmg-office-home-try-free-link"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//a[@id='pmg-office-home-try-free-link']//div[.='Try for free']"))).Build().Perform();
+        wd.FindElement(By.CssSelector("div.pmg-legal.x-hidden-focus")).Click();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//div[1]/section/div/div[2]/div/section/div[2]/div[1]/section/div/div/div[2]/div/div[1]/div/div[1]/div[6]/a"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//div[1]/section/div/div[2]/div/section/div[2]/div[1]/section/div/div/div[3]/div/div[2]/div[1]/p"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//section[@id='pmg-body']//div[.='PowerPoint']"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("PowerPoint_image"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.XPath("//section[@id='pmg-body']//div[.='Outlook']"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("hero-content"))).Build().Perform();
+        new Actions(wd).MoveToElement(wd.FindElement(By.Id("pmg-products-cta"))).Build().Perform();
+      } finally { wd.Quit(); }
+    }
+    
+    public static bool isAlertPresent(IWebDriver wd) {
+        try {
+            wd.SwitchTo().Alert();
+            return true;
+        } catch (NoAlertPresentException e) {
+            return false;
+        }
+    }
+  }
+}
